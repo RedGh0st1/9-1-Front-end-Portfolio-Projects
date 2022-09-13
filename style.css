@@ -13,12 +13,56 @@
   font-size: 245%;
 }
 
-.home ul li {
-  font-size: 150%;
-  grid-column: 1;
-  margin-left: 15%;
+.home {
+  display: grid;
+  padding: 20px 20px;
+  height: 60px;
+}
+
+.home ul {
+  margin: 0px;
   list-style: none;
+}
+
+ul li {
+  list-style: none;
+  margin-left: 8%;
   display: inline-block;
+  position: relative;
+}
+
+ul li a {
+  font-size: 130%;
+  display: block;
+  padding: 12px 10px;
+}
+
+ul li ul {
+  /* font-size: 100%; */
+  display: none;
+  position: absolute;
+  background-color: black;
+  padding: 3px 0px 25px 3px;
+  border-radius: 4px;
+}
+
+ul li ul li a {
+  position: absolute;
+  padding: 2px 2px 3px 3px;
+}
+
+ul li ul li a:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+ul li ul li {
+  width: 140px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+ul li:hover ul {
+  display: block;
 }
 
 .container {
@@ -49,7 +93,7 @@
 }
 
 .home a {
-  color: rgb(237, 15, 15);
+  color: rgb(235, 8, 8);
   text-decoration: none;
 }
 
