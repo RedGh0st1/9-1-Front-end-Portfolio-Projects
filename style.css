@@ -1,4 +1,10 @@
 /* home page */
+
+html body {
+  margin: 0;
+  padding: 0;
+}
+
 .anime {
   display: grid;
   font-family: cursive;
@@ -34,14 +40,12 @@ ul li {
 ul li a {
   font-size: 130%;
   display: block;
-  padding: 12px 10px;
+  padding: 5px 5px;
 }
 
 ul li ul {
-  /* font-size: 100%; */
   display: none;
   position: absolute;
-  background-color: black;
   padding: 3px 0px 25px 3px;
   border-radius: 4px;
 }
@@ -75,6 +79,7 @@ ul li:hover ul {
 .homeform {
   grid-column: 2;
   margin-left: 35%;
+  margin-bottom: 25%;
 }
 
 #submitEnter {
@@ -87,9 +92,12 @@ ul li:hover ul {
   color: darkgreen;
 }
 
-.homebody {
+html {
   background-image: url(./assets/EqXqR3nUwAIDgyt.jpeg);
+  background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+  height: 100%;
 }
 
 .home a {
@@ -99,57 +107,82 @@ ul li:hover ul {
 
 /* About Page */
 .AboutPage ul li {
-  font-size: 150%;
+  font-size: 130%;
   grid-column: 1;
-  margin-left: 30%;
+  margin-left: 25%;
+  margin-right: 5%;
   list-style: none;
   display: inline-block;
 }
 .aboutmepage {
-  font-size: 150%;
+  font-size: 140%;
   color: white;
   margin-left: 45%;
 }
 
 .myname {
-  font-size: 242%;
-  margin-left: 41%;
+  font-size: 240%;
+  margin-left: 42%;
   color: lavender;
 }
 
 .aboutBody {
   background-image: url(./assets/EqXqR3nUUAE99vd.jpeg);
+  background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+  height: 100%;
 }
 
 .AboutPage a {
   color: aqua;
   text-decoration: none;
-  background-color: steelblue;
 }
 
 /*  contact page */
 
 .ContactPage ul li {
-  font-size: 150%;
+  font-size: 130%;
   grid-column: 1;
-  margin-left: 30%;
+  margin-left: 26%;
   list-style: none;
   display: inline-block;
 }
 
 .contactbody {
-  background-color: black;
+  background-image: url(./assets/hd-wallpaper-ge84376764_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100%;
 }
 
 .contact {
+  margin: 105px;
   color: whitesmoke;
 }
 
 .lennie {
+  margin: 105px;
   color: whitesmoke;
 }
+.Contact a {
+  margin: 105px;
+  color: blue;
+  margin-top: 10px;
+}
+
 .ContactPage a {
   color: rgb(239, 16, 16);
   text-decoration: none;
+}
+.Contact p {
+  color: white;
+  font-size: 24px;
+  margin-left: 85px;
+}
+
+/* media query */
+
+@media (min-width: 1208px) {
 }

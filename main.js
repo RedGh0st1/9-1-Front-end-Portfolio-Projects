@@ -1,24 +1,25 @@
 const form = document.querySelector("form");
 
-form.addEventListener("click", (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
+  //   console.log(event.target.search.value);
+  const lookUp = event.target.search.value;
+  //   console.log(lookUp);
 
-  const Lookup = event.target.search.value;
+  //   const mangaUrl = `https://api.jikan.moe/v4/manga?q=${lookUp}/full`;
+  const mangaUrltoo = `https://api.jikan.moe/v4/anime?q=${lookUp}/characters`;
 
-  //   const characterUrl = `https://api.jikan.moe/v4/anime?q=deku&sfw`;
-
-  const mangaUrl = `https://api.jikan.moe/v4/manga/${Lookup}/full`;
-
-  //   const animeUrl = `https://api.jikan.moe/v4/anime/{}/full`;
-
-  //   const animeGenreUrl = `https://api.jikan.moe/v4/genres/anime`;
-
-  //   const mangaGenreUrl = `https://api.jikan.moe/v4/genres/manga`;
-  // });
-
-  fetch(`${mangaUrl}`)
+  //   console.log(mangaUrltoo);
+  fetch(`${mangaUrltoo}`)
     .then((res) => res.json())
-    .then((resJson) => console.log(resJson))
+    .then((data) => console.log(data, "Data"));
+  //   let animedata = data;
+  //   const animedata = data[0].images.jpg.image_url;
+  const body = document.querySelector(".homebody");
+  body.style.backgroundImage = `${data[0].images.jpg.image_url}`;
+  console
+    .log(animedata)
+
     .catch((error) => console.log(error));
 
   // fetch(animeUrl)
@@ -26,3 +27,12 @@ form.addEventListener("click", (event) => {
   //   .then((resJson) => console.log(resJson))
   //   .catch((error) => console.log(error));
 });
+
+//   const characterUrl = `https://api.jikan.moe/v4/anime?q=deku&sfw`;
+
+//   const animeUrl = `https://api.jikan.moe/v4/anime/{}/full`;
+
+//   const animeGenreUrl = `https://api.jikan.moe/v4/genres/anime`;
+
+//   const mangaGenreUrl = `https://api.jikan.moe/v4/genres/manga`;
+// });
