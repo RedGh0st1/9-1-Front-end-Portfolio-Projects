@@ -10,17 +10,16 @@ form.addEventListener("submit", (event) => {
   const mangaUrltoo = `https://api.jikan.moe/v4/anime?q=${lookUp}/characters`;
 
   //   console.log(mangaUrltoo);
-  fetch(`${mangaUrltoo}`).then((res) => res.json());
-  //   let animedata = data;
-  //   const animedata = data[0].images.jpg.image_url;
-  const body = document.querySelector(".homebody");
-  body.style.backgroundImage = `${data[0].images.jpg.image_url}`.then(
-    (data) => {
+  fetch(`${mangaUrltoo}`)
+    .then((res) => res.json())
+    //   let animedata = data;
+    //   const animedata = data[0].images.jpg.image_url;
+
+    .then((data) => {
+      const body = document.querySelector(".homebody");
+      body.style.backgroundImage = data[0].images.jpg.image_url;
       console.log(data, "Data");
-    }
-  );
-  console
-    .log(animedata)
+    })
 
     .catch((error) => console.log(error));
 
@@ -28,7 +27,7 @@ form.addEventListener("submit", (event) => {
   //   .then((res) => res.json())
   //   .then((resJson) => console.log(resJson))
   //   .catch((error) => console.log(error));
-  form.rest();
+  form.reset();
 });
 
 //   const characterUrl = `https://api.jikan.moe/v4/anime?q=deku&sfw`;
