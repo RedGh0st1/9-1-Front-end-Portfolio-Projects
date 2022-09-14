@@ -138,6 +138,11 @@ html {
   color: aqua;
   text-decoration: none;
 }
+div.About.Me {
+  display: grid;
+  grid-column: 1;
+  margin-right: 10px;
+}
 
 /*  contact page */
 
