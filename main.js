@@ -9,7 +9,6 @@ form.addEventListener("submit", (event) => {
   //   const mangaUrl = `https://api.jikan.moe/v4/manga?q=${lookUp}/full`;
   const mangaUrltoo = `https://api.jikan.moe/v4/anime?q=${lookUp}/characters`;
 
-  //   console.log(mangaUrltoo);
   fetch(`${mangaUrltoo}`)
     .then((res) => res.json())
     //   let animedata = data;
@@ -17,7 +16,7 @@ form.addEventListener("submit", (event) => {
 
     .then((data) => {
       const body = document.querySelector(".homebody");
-      body.style.backgroundImage = data[0].images.jpg.image_url;
+      body.style.backgroundImage = data.data[0].images.jpg.image_url;
       console.log(data, "Data");
     })
 
@@ -29,12 +28,3 @@ form.addEventListener("submit", (event) => {
   //   .catch((error) => console.log(error));
   form.reset();
 });
-
-//   const characterUrl = `https://api.jikan.moe/v4/anime?q=deku&sfw`;
-
-//   const animeUrl = `https://api.jikan.moe/v4/anime/{}/full`;
-
-//   const animeGenreUrl = `https://api.jikan.moe/v4/genres/anime`;
-
-//   const mangaGenreUrl = `https://api.jikan.moe/v4/genres/manga`;
-// });
