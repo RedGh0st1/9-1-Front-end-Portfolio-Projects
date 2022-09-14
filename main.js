@@ -14,10 +14,10 @@ form.addEventListener("submit", (event) => {
     //   let animedata = data;
     //   const animedata = data[0].images.jpg.image_url;
 
-    .then((data) => {
+    .then((resJson) => {
       const body = document.querySelector(".homebody");
-      body.style.backgroundImage = data.data[0].images.jpg.image_url;
-      console.log(data, "Data");
+      body.style.backgroundImage = resJson.data[0].images.jpg.image_url;
+      console.log(resJson, "Data");
     })
 
     .catch((error) => console.log(error));
