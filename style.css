@@ -1,4 +1,4 @@
-/* home page */
+/* -------------------------Home page------------------------- */
 
 html body {
   margin: 0;
@@ -105,7 +105,8 @@ html {
   text-decoration: none;
 }
 
-/* About Page */
+/*--------------------------- About Page ---------------------------------------------------*/
+
 .AboutPage ul li {
   font-size: 130%;
   grid-column: 1;
@@ -138,13 +139,15 @@ html {
   color: aqua;
   text-decoration: none;
 }
-div.About.Me {
+div.About {
   display: grid;
-  grid-column: 1;
+  grid-column: 2;
   margin-right: 10px;
 }
-
-/*  contact page */
+article p {
+  color: white;
+}
+/* ----------------------------------- contact page ------------------------------------*/
 
 .ContactPage ul li {
   font-size: 130%;

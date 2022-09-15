@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-
+const main = document.querySelector("main");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   //   console.log(event.target.search.value);
@@ -11,13 +11,19 @@ form.addEventListener("submit", (event) => {
 
   fetch(`${mangaUrltoo}`)
     .then((res) => res.json())
-    //   let animedata = data;
-    //   const animedata = data[0].images.jpg.image_url;
+    .then((data) => {
+      const animedata = data.data[0];
+      //   const body = document.querySelector(".homebody");
 
-    .then((resJson) => {
-      const body = document.querySelector(".homebody");
-      body.style.backgroundImage = resJson.data[0].images.jpg.image_url;
-      console.log(resJson, "Data");
+      //   console.log(animedata.images.jpg.image_url);
+      const img = animedata.images.jpg.image_url;
+
+      document.body.style.backgroundImage = url(`${img}`);
+
+      const animeInfo = animedata.url;
+
+      //   console.log(animeInfo, " URL");
+      //   console.log(animedata, "Data");
     })
 
     .catch((error) => console.log(error));
