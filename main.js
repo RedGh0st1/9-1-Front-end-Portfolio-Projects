@@ -2,22 +2,14 @@ const form = document.querySelector("form");
 const main = document.querySelector("main");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  //   console.log(event.target.search.value);
-  const lookUp = event.target.search.value;
-  //   console.log(lookUp);
 
-  //   const mangaUrl = `https://api.jikan.moe/v4/manga?q=${lookUp}/full`;
+  const lookUp = event.target.search.value;
   const mangaUrltoo = `https://api.jikan.moe/v4/anime?q=${lookUp}/characters`;
 
   fetch(`${mangaUrltoo}`)
     .then((res) => res.json())
     .then((data) => {
       const animedata = data.data[0];
-      //   const body = document.querySelector(".homebody");
-
-      //   console.log(animedata.images.jpg.image_url);
-      //   const img = animedata.images.jpg.image_url;
-      //   console.log(animeInfo, " URL");
       document.querySelector(".stats").innerHTML = `
       <h2>Statistics</h2>
       <p><strong style: black;>Score:</strong> ${animedata.score}</p>
@@ -26,12 +18,16 @@ form.addEventListener("submit", (event) => {
       <p><strong>Status:</strong> ${animedata.status}</p>
       <p><strong>Rating:</strong> ${animedata.rating}</p>`;
 
-      const img = document.createElement("img");
+      const img = document.querySelector("img");
+      img.src = animedata.images.jpg.image_url;
+
+      console.log(img.src);
 
       document.querySelector(".container").innerHTML = `
       <h2>Description</h2>
       <p><strong>Synopsis:</strong> ${animedata.synopsis}</p>
       <p><strong>Background:</strong> ${animedata.background}</p>`;
+
       console.log(animedata, "Data");
     })
 
