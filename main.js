@@ -18,7 +18,7 @@ form.addEventListener("submit", (event) => {
       <p><strong>Status:</strong> ${animedata.status}</p>
       <p><strong>Rating:</strong> ${animedata.rating}</p>`;
 
-      const img = document.querySelector("img");
+      const img = document.querySelector(".animepic");
       img.src = animedata.images.jpg.image_url;
 
       console.log(img.src);

@@ -86,7 +86,7 @@ ul li:hover ul {
   margin-right: 52%;
   background-color: white;
 }
-img {
+.animepic {
   grid-column: 2;
   grid-row: 1;
   margin-left: 0%;
@@ -162,8 +162,20 @@ div.About {
   grid-column: 2;
   margin-right: 10%;
 }
+
+article {
+  display: grid;
+  grid-column: 3;
+  grid-row: 1;
+}
 article p {
+  font-size: 100%;
+  grid-column: 4;
   color: white;
+}
+
+.image {
+  grid-column: 1;
 }
 /* ----------------------------------- contact page ------------------------------------*/
 
