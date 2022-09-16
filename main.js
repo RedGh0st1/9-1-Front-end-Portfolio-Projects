@@ -28,7 +28,9 @@ form.addEventListener("submit", (event) => {
       <p><strong>Synopsis:</strong> ${animedata.synopsis}</p>
       <p><strong>Background:</strong> ${animedata.background}</p>`;
 
-      console.log(animedata, "Data");
+      const description = document.querySelector(".container");
+      description.style.backgroundColor = "white";
+      //   console.log(animedata, "Data");
     })
 
     .catch((error) => console.log(error));
