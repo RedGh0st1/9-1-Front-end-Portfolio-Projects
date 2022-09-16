@@ -2,6 +2,9 @@ const form = document.querySelector("form");
 const main = document.querySelector("main");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  if (input.value === Number) {
+    window.alert("Please enter only words");
+  }
 
   const lookUp = event.target.search.value;
   const mangaUrltoo = `https://api.jikan.moe/v4/anime?q=${lookUp}/characters`;
