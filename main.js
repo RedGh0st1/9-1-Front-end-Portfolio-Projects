@@ -16,14 +16,23 @@ form.addEventListener("submit", (event) => {
       //   const body = document.querySelector(".homebody");
 
       //   console.log(animedata.images.jpg.image_url);
-      const img = animedata.images.jpg.image_url;
-
-      document.body.style.backgroundImage = url(`${img}`);
-
-      const animeInfo = animedata.url;
-
+      //   const img = animedata.images.jpg.image_url;
       //   console.log(animeInfo, " URL");
-      //   console.log(animedata, "Data");
+      document.querySelector(".stats").innerHTML = `
+      <h2>Statistics</h2>
+      <p><strong style: black;>Score:</strong> ${animedata.score}</p>
+      <p><strong>Rank:</strong> ${animedata.rank}</p>
+      <p><strong>Popularity:</strong> ${animedata.popularity}</p>
+      <p><strong>Status:</strong> ${animedata.status}</p>
+      <p><strong>Rating:</strong> ${animedata.rating}</p>`;
+
+      const img = document.createElement("img");
+
+      document.querySelector(".container").innerHTML = `
+      <h2>Description</h2>
+      <p><strong>Synopsis:</strong> ${animedata.synopsis}</p>
+      <p><strong>Background:</strong> ${animedata.background}</p>`;
+      console.log(animedata, "Data");
     })
 
     .catch((error) => console.log(error));
