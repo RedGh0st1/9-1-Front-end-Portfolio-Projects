@@ -25,7 +25,7 @@ form.addEventListener("submit", (event) => {
       const img = document.querySelector(".animepic");
       img.src = animedata.images.jpg.image_url;
 
-      console.log(img.src);
+      //   console.log(img.src);
 
       document.querySelector(".container").innerHTML = `
       <h2>Description</h2>
