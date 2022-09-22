@@ -271,7 +271,14 @@ article p {
   margin-top: -13%;
 }
 
-/* media query */
-
-@media (max-width: 767px) {
+/* media queries */
+@media (min-width: 1280px) {
+}
+@media (max-width: 1279px) {
+}
+@media (max-width: 650px) {
+  .home {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
