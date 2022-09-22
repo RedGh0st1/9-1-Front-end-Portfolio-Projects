@@ -39,6 +39,7 @@ form.addEventListener("submit", (event) => {
       body.style.backgroundColor = `black`;
       const Topfive = document.querySelector(".Topfive").remove();
       const anime = document.querySelector(".anime").remove();
+      const power = document.querySelector(".Power").remove();
     })
 
     .catch((error) => console.log(error));
