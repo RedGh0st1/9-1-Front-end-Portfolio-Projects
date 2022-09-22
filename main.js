@@ -37,7 +37,6 @@ form.addEventListener("submit", (event) => {
       const description = document.querySelector(".container");
       description.style.backgroundColor = "white";
       //   console.log(animedata, "Data");
-
       const body = document.querySelector(".homebody");
       body.style.backgroundColor = `black`;
     })
@@ -59,7 +58,6 @@ fetch(`${topAnime}`)
       const image = element.images.jpg.image_url;
       const anime = `<li><h2>${title}</h2><img src="${image}"><p>rank:${rank}</p></li>`;
       document.querySelector(".Topfive").innerHTML += anime;
-      console.log(anime);
     });
     const anime = document.querySelector(".Topfive");
     // console.log(anime);

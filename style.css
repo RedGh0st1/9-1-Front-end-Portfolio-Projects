@@ -51,7 +51,7 @@ html body {
 
 .Topfive li img {
   grid-row: 1;
-  width: 140%;
+  width: 150%;
   height: 90%;
 }
 
@@ -249,7 +249,7 @@ article p {
 
 .lennie {
   margin: 15%;
-  margin-top: -13%;
+  margin-top: -15%;
   color: white;
 }
 .Contact a {
