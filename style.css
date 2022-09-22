@@ -33,7 +33,7 @@ html body {
 .Topfive {
   display: grid;
   height: 95%;
-  width: 62%;
+  width: 65%;
   grid-column: 2;
   grid-row: 1/6;
   padding: 3%;

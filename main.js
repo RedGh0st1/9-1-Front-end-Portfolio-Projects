@@ -27,8 +27,6 @@ form.addEventListener("submit", (event) => {
       const img = document.querySelector(".animepic");
       img.src = animedata.images.jpg.image_url;
 
-      //   console.log(img.src);
-
       document.querySelector(".container").innerHTML = `
       <h2>Description</h2>
       <p><strong>Synopsis:</strong> ${animedata.synopsis}</p>
@@ -45,6 +43,7 @@ form.addEventListener("submit", (event) => {
 
   form.reset();
 });
+
 const topAnime = "https://api.jikan.moe/v4/top/anime?limit=5&offset=0";
 fetch(`${topAnime}`)
   .then((res) => res.json())
@@ -58,13 +57,6 @@ fetch(`${topAnime}`)
       const image = element.images.jpg.image_url;
       const anime = `<li><h2>${title}</h2><img src="${image}"><p>rank:${rank}</p></li>`;
       document.querySelector(".Topfive").innerHTML += anime;
-    });
-    const anime = document.querySelector(".Topfive");
-    // console.log(anime);
-    anime.addEventListener("click", (event) => {
-      event.preventDefault();
-
-      console.log(event.target.img.value);
     });
   })
   .catch((error) => {
