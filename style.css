@@ -273,5 +273,5 @@ article p {
 
 /* media query */
 
-@media (min-width: 1208px) {
+@media (max-width: 767px) {
 }
