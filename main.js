@@ -1,5 +1,6 @@
 const form = document.querySelector("form");
 const main = document.querySelector("main");
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -8,15 +9,16 @@ form.addEventListener("submit", (event) => {
     window.alert("Please enter info");
   }
 
-  const mangaUrltoo = `https://api.jikan.moe/v4/anime?q=${lookUp}/characters`;
+  const mangaUrltoo = `https://api.jikan.moe/v4/anime?q=${lookUp}/full`;
 
   fetch(`${mangaUrltoo}`)
     .then((res) => res.json())
     .then((data) => {
       const animedata = data.data[0];
+      console.log(animedata);
       document.querySelector(".stats").innerHTML = `
       <h2>Statistics</h2>
-      <p><strong style: black;>Score:</strong> ${animedata.score}</p>
+      <p><strong>Score:</strong> ${animedata.score}</p>
       <p><strong>Rank:</strong> ${animedata.rank}</p>
       <p><strong>Popularity:</strong> ${animedata.popularity}</p>
       <p><strong>Status:</strong> ${animedata.status}</p>
@@ -35,13 +37,38 @@ form.addEventListener("submit", (event) => {
       const description = document.querySelector(".container");
       description.style.backgroundColor = "white";
       //   console.log(animedata, "Data");
+
+      const body = document.querySelector(".homebody");
+      body.style.backgroundColor = `black`;
     })
 
     .catch((error) => console.log(error));
 
-  // fetch(animeUrl)
-  //   .then((res) => res.json())
-  //   .then((resJson) => console.log(resJson))
-  //   .catch((error) => console.log(error));
   form.reset();
 });
+const topAnime = "https://api.jikan.moe/v4/top/anime?limit=5&offset=0";
+fetch(`${topAnime}`)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data.data);
+    const topFive = data.data;
+    topFive.map((element) => {
+      //   console.log(element.rank);
+      const title = element.title;
+      const rank = element.rank;
+      const image = element.images.jpg.image_url;
+      const anime = `<li><h2>${title}</h2><img src="${image}"><p>rank:${rank}</p></li>`;
+      document.querySelector(".Topfive").innerHTML += anime;
+      console.log(anime);
+    });
+    const anime = document.querySelector(".Topfive");
+    // console.log(anime);
+    anime.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      console.log(event.target.img.value);
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });

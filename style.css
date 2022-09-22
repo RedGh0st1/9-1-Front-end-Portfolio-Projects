@@ -23,7 +23,7 @@ html body {
 
 .Power {
   font-family: cursive;
-  margin-left: 18%;
+  margin-left: 120%;
   font-size: 240%;
   width: 32%;
   grid-column: 1;
@@ -31,13 +31,36 @@ html body {
 }
 
 .Topfive {
-  color: white;
+  display: grid;
   height: 95%;
+  width: 62%;
   grid-column: 2;
   grid-row: 1/6;
-  border: 1px solid red;
+  padding: 3%;
+  margin-left: 34%;
+}
+
+.Topfive li {
+  grid-row: 1;
+  padding: 15%;
+  margin: 9%;
+  margin-top: 0%;
+  margin-bottom: 2%;
   text-align: center;
-  background-color: black;
+}
+
+.Topfive li img {
+  grid-row: 1;
+  width: 140%;
+  height: 90%;
+}
+
+h2 {
+  font-size: 0%;
+}
+
+p {
+  color: red;
 }
 
 .home {
@@ -95,16 +118,17 @@ ul li:hover ul {
   display: grid;
   margin-top: 0%;
   margin-left: 15%;
-  margin-right: 12%;
-  /* background-color: blanchedalmond; */
+  margin-right: 10%;
 }
+
 .statistics {
   display: grid;
   margin-left: 15%;
-  margin-top: 5%;
+  margin-top: 0%;
   margin-right: 52%;
   background-color: white;
 }
+
 .animepic {
   grid-column: 2;
   grid-row: 1;
@@ -114,9 +138,9 @@ ul li:hover ul {
 }
 
 .homeform {
+  grid-row: 1;
   grid-column: 2;
-  margin-left: 2%;
-  margin-bottom: 20%;
+  margin-top: 36%;
 }
 
 #submitEnter {
@@ -137,6 +161,7 @@ html {
   background-size: cover;
   overflow: hidden;
   height: 100%;
+  width: 100%;
 }
 
 .home a {
@@ -225,7 +250,7 @@ article p {
 .lennie {
   margin: 15%;
   margin-top: -13%;
-  color: whitesmoke;
+  color: white;
 }
 .Contact a {
   margin: 15%;
