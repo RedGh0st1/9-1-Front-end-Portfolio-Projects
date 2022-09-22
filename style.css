@@ -5,20 +5,39 @@ html body {
   padding: 0;
 }
 
-.anime {
+.AP {
   display: grid;
+  height: 50%;
+  width: 75%;
+  margin-left: 12%;
+}
+
+.anime {
   font-family: cursive;
-  margin-left: 3%;
-  font-size: 245%;
-  margin-top: -4%;
+  font-size: 240%;
+  margin-top: -3%;
+  width: 32%;
+  grid-column: 1;
+  color: aqua;
 }
 
 .Power {
-  display: grid;
   font-family: cursive;
-  margin-left: 13%;
-  font-size: 245%;
-  margin-top: -1%;
+  margin-left: 18%;
+  font-size: 240%;
+  width: 32%;
+  grid-column: 1;
+  color: aquamarine;
+}
+
+.Topfive {
+  color: white;
+  height: 95%;
+  grid-column: 2;
+  grid-row: 1/6;
+  border: 1px solid red;
+  text-align: center;
+  background-color: black;
 }
 
 .home {
@@ -101,11 +120,13 @@ ul li:hover ul {
 }
 
 #submitEnter {
+  width: 10%;
   background-color: darkgreen;
   color: orchid;
 }
 
 #submitEnter:hover {
+  width: 10%;
   background-color: orchid;
   color: darkgreen;
 }
